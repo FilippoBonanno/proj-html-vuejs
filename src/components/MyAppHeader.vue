@@ -22,12 +22,17 @@ export default {
     },
     methods: {
         nextImage() {
-
+            clearInterval(this.timer)
             if (this.bgActive >= 2) {
                 this.bgActive = 0
+                
             } else {
                 this.bgActive++;
+                
             };
+            this.timer = setInterval(this.nextImage, 2000);
+            
+
 
         },
 
