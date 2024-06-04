@@ -32,7 +32,6 @@ export default {
 
 
                     <div class="text-dark">⟶</div>
-
                     <div class="dropdown">
                         <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,7 +108,7 @@ export default {
                     <div class="text-dark arrow">⟶</div>
                     <div class="dropdown">
 
-                        <a class="dropdown-item animated pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                        <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             HOMES
                         </a>
@@ -129,14 +128,20 @@ export default {
                         <i class="fa-solid fa-bars"></i>
                     </a>
 
-
-
-
                 </div>
-
 
             </div>
         </nav>
+
+        <div  class="container cardHeader">
+            <div>
+            <h1>OUR TEAM</h1>
+            <p style="width: 50%;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem at perferendis culpa pariatur aperiam
+                corrupti blanditiis, fugit dolo.</p>
+                <a href="#" class="btn btn-primary btn-lg active me-3" data-mdb-ripple-init role="button" aria-pressed="true">Primary link</a>
+                <a href="#" class="btn btn-primary btn-lg active" data-mdb-ripple-init role="button" aria-pressed="true">Primary link</a>
+            </div>
+        </div>
     </div>
 
 </template>
@@ -160,13 +165,13 @@ export default {
 
 }
 
-.arrow {
-    opacity: 0;
-    transition: 800ms;
-}
+.cardHeader {
+    color: black;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 60%;
+    align-items: center;
 
-.animated:hover + .arrow {
-    opacity: 1;
 }
-
 </style>
