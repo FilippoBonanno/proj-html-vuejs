@@ -28,13 +28,10 @@ export default {
     },
     data() {
         return {
-            store
+            store,
         }
     },
     methods: {
-        getImg(path,name){
-            return new URL(`${path}${name}`,import.meta.url).href;
-        }
     },
     mounted() {
     }
@@ -42,12 +39,10 @@ export default {
 </script>
 
 <template>
-    <h1>Questo è il main</h1>
 
-    
-    <Specialties :cardInfo="store.immagini.skillsIcon"/>
-    <Founder />
-    <Events />
+    <Specialties :cardInfo="store.immagini.skillsIcon" />
+    <Founder :foundersImg="store.immagini.foundersImg" />
+    <Events :events="store.events" />
     <Stats />
     <News />
     <Testimonials />

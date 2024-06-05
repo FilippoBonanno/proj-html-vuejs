@@ -97,16 +97,17 @@ export default {
     flex-wrap: wrap;
     height: calc(100% - 178px);
     align-items: center;
+    margin-left: 5%;
 
 }
 
 .arrowLeft {
-    position: relative;
-    right: 10rem;
+    position: absolute;
+    left: 3%;
 }
 
 .arrowRight {
-    position: relative;
-    left: 22rem;
+    position: absolute;
+    right: 3%;
 }
 </style>
