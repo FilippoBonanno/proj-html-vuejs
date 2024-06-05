@@ -6,9 +6,21 @@ export default {
     data() {
         return {
             store,
+            elementsVisible: false,
 
         }
-    }
+    },
+    methods: {
+        showElements() {
+            this.elementsVisible = true;
+        },
+        hideElements() {
+            this.elementsVisible = false;
+        }
+
+
+
+    },
 }
 </script>
 
@@ -35,7 +47,7 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a v-for="element in this.store.navBar.homes" class="dropdown-item" href="#">{{element}}</a>
+                        <a v-for="element in this.store.navBar.homes" class="dropdown-item" href="#">{{ element }}</a>
                     </div>
                 </div>
 
@@ -48,7 +60,7 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a v-for="element in this.store.navBar.pages" class="dropdown-item" href="#">{{element}}</a>
+                        <a v-for="element in this.store.navBar.pages" class="dropdown-item" href="#">{{ element }}</a>
                     </div>
                 </div>
 
@@ -61,7 +73,7 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a v-for="element in this.store.navBar.blog" class="dropdown-item" href="#">{{element}}</a>
+                        <a v-for="element in this.store.navBar.blog" class="dropdown-item" href="#">{{ element }}</a>
 
                     </div>
                 </div>
@@ -75,7 +87,7 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a v-for="element in this.store.navBar.shop" class="dropdown-item" href="#">{{element}}</a>
+                        <a v-for="element in this.store.navBar.shop" class="dropdown-item" href="#">{{ element }}</a>
                     </div>
                 </div>
 
@@ -88,24 +100,21 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a v-for="element in this.store.navBar.events" class="dropdown-item" href="#">{{element}}</a>
+                        <a v-for="element in this.store.navBar.events" class="dropdown-item" href="#">{{ element }}</a>
                     </div>
                 </div>
 
-                <div class="text-dark arrow">⟶</div>
-                <div class="dropdown">
+                <span class="text-dark arrow">⟶</span>
 
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div>
+
+                    <a class="pe-4 dropdown-item text-dark fw-bold" href="#" data-bs-toggle="collapse"
+                        data-bs-target="#collapseContent" aria-expanded="false">
                         ELEMENTS
                     </a>
 
-                    <div class="dropdown-menu " aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </div>
+
 
                 <a class="dropdown-item pe-4 text-dark fw-bold" href="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -119,6 +128,42 @@ export default {
 
         </div>
     </nav>
+
+    <div id="collapseContent" class="bg-dark collapse elementsContainer ">
+        <div class="container d-flex">
+            <div class="col-3 p-4">
+                <h2>Classic</h2>
+                <ul class="list-group">
+                    <li class="elements list-group p-1 lightslategray"
+                        v-for="element in this.store.navBar.elements.classic">{{ element }}</li>
+                </ul>
+            </div>
+            <div class="col-3 p-4">
+                <h2>Presentational</h2>
+                <ul class="list-group">
+                    <li class="elements list-group p-1 lightslategray"
+                        v-for="element in this.store.navBar.elements.presentational">{{ element }}</li>
+                </ul>
+            </div>
+            <div class="col-3 p-4">
+                <h2>Infographic</h2>
+                <ul class="list-group">
+                    <li class="elements list-group p-1 lightslategray"
+                        v-for="element in this.store.navBar.elements.infographic">{{ element }}</li>
+                </ul>
+            </div>
+            <div class="col-3 p-4">
+                <h2>Typography</h2>
+                <ul class="list-group">
+                    <li class="elements list-group p-1 lightslategray"
+                        v-for="element in this.store.navBar.elements.typography">{{ element }}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
 </template>
 
 <style scoped>
@@ -140,10 +185,10 @@ export default {
     width: 17rem;
     padding: 1rem;
 }
+
 .dropdown-item {
     color: rgb(207, 204, 204);
-    
-    
+
 }
 
 .dropdown-item:hover {
@@ -151,4 +196,19 @@ export default {
     color: white;
 }
 
+.elementsContainer {
+    position: absolute;
+    width: 100%;
+
+}
+
+
+.elements {
+    color: lightslategray;
+}
+
+.elements:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
 </style>

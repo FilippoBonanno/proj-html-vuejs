@@ -62,5 +62,7 @@ export default {
 
 .orange {
     background-color: #FF4612;
+    
 }
+
 </style>
