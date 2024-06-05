@@ -63,7 +63,7 @@ export default {
 
             <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft">⟵</a>
             <!-- CARD JUMBOTRON -->
-            <CardJumbotron />
+            <CardJumbotron :active="bgActive"/>
             <!-- CARD JUMBOTRON -->
             <a @click="nextImage()" class="text-dark btn fs-1 arrowRight">⟶</a>
 

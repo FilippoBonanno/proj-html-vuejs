@@ -1,9 +1,11 @@
 <script>
+import store from '../../data/store.js'
 
 export default {
     name: "NavBar",
     data() {
         return {
+            store,
 
         }
     }
@@ -33,9 +35,7 @@ export default {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a v-for="element in this.store.navBar.homes" class="dropdown-item" href="#">{{element}}</a>
                     </div>
                 </div>
 
@@ -44,13 +44,11 @@ export default {
                 <div class="dropdown">
                     <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        HOMES
+                        PAGES
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a v-for="element in this.store.navBar.pages" class="dropdown-item" href="#">{{element}}</a>
                     </div>
                 </div>
 
@@ -59,13 +57,12 @@ export default {
                 <div class="dropdown">
                     <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        HOMES
+                        BLOG
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a v-for="element in this.store.navBar.blog" class="dropdown-item" href="#">{{element}}</a>
+
                     </div>
                 </div>
 
@@ -74,13 +71,11 @@ export default {
 
                     <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        HOMES
+                        SHOP
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a v-for="element in this.store.navBar.shop" class="dropdown-item" href="#">{{element}}</a>
                     </div>
                 </div>
 
@@ -89,13 +84,11 @@ export default {
 
                     <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        HOMES
+                        EVENTS
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownHomes">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a v-for="element in this.store.navBar.events" class="dropdown-item" href="#">{{element}}</a>
                     </div>
                 </div>
 
@@ -104,10 +97,10 @@ export default {
 
                     <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        HOMES
+                        ELEMENTS
                     </a>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownHomes">
+                    <div class="dropdown-menu " aria-labelledby="dropdownHomes">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
@@ -141,4 +134,21 @@ export default {
     width: 100%;
 
 }
+
+.dropdown-menu {
+    background-color: black;
+    width: 17rem;
+    padding: 1rem;
+}
+.dropdown-item {
+    color: rgb(207, 204, 204);
+    
+    
+}
+
+.dropdown-item:hover {
+    background-color: inherit;
+    color: white;
+}
+
 </style>
