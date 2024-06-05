@@ -97,7 +97,7 @@ export default {
     flex-wrap: wrap;
     height: calc(100% - 178px);
     align-items: center;
-    margin-left: 5%;
+    margin-left: 10%;
 
 }
 
