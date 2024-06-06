@@ -181,7 +181,7 @@ export default {
 }
 
 .dropdown-menu {
-    background-color: black;
+    background-color: #212529;
     width: 17rem;
     padding: 1rem;
 }
