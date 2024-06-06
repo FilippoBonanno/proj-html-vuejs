@@ -11,12 +11,7 @@ export default {
         }
     },
     methods: {
-        showElements() {
-            this.elementsVisible = true;
-        },
-        hideElements() {
-            this.elementsVisible = false;
-        }
+
 
 
 
@@ -109,7 +104,7 @@ export default {
                 <div>
 
                     <a class="pe-4 dropdown-item text-dark fw-bold" href="#" data-bs-toggle="collapse"
-                        data-bs-target="#collapseContent" aria-expanded="false">
+                        data-bs-target="#collapseElements" aria-expanded="false">
                         ELEMENTS
                     </a>
 
@@ -120,16 +115,36 @@ export default {
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
 
-                <a class="dropdown-item pe-3 text-dark fw-bold" href="#">
+
+                <a class="dropdown-item pe-3 text-dark fw-bold" href="#" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-bars"></i>
                 </a>
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Everlead Theme.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi earum, quam hic a
+                            magni? Vel voluptates, eum suscipit tempora nostrum necessitatibus earum ducimus perferendis
+                            quas alias iusto? Optio, eius?</p>
+                    </div>
+                </div>
+
+
+
+
+
 
             </div>
 
         </div>
     </nav>
 
-    <div id="collapseContent" class="bg-dark collapse elementsContainer ">
+    <div id="collapseElements" class="bg-dark collapse elementsContainer ">
         <div class="container d-flex">
             <div class="col-3 p-4">
                 <h2>Classic</h2>

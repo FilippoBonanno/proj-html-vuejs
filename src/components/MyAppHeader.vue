@@ -61,7 +61,7 @@ export default {
 
         <div class="container cardHeader">
 
-            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft">⟵</a>
+            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft"><img style="transform: rotate(180deg); filter: brightness(0) saturate(100%);" src="../assets/svg/svg-6.svg"></a>
             <!-- CARD JUMBOTRON -->
             <CardJumbotron :active="bgActive"/>
             <!-- CARD JUMBOTRON -->
@@ -76,16 +76,19 @@ export default {
 .bgHeader-1 {
     height: 100vh;
     background-image: url(../assets/img/h1-rev-img-01.jpg);
+    background-size: cover;
 }
 
 .bgHeader-2 {
     height: 100vh;
     background-image: url(../assets/img/rev-slider-main-home-img-02.png);
+    background-size: cover;
 }
 
 .bgHeader-3 {
     height: 100vh;
     background-image: url(../assets/img/rev-slider-main-home-img-03.jpg);
+    background-size: cover;
 }
 
 
@@ -104,10 +107,12 @@ export default {
 .arrowLeft {
     position: absolute;
     left: 3%;
+
 }
 
 .arrowRight {
     position: absolute;
     right: 3%;
+    filter: brightness(0) saturate(100%);
 }
 </style>
