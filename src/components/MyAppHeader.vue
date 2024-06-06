@@ -61,7 +61,7 @@ export default {
 
         <div class="container cardHeader">
 
-            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft"><img style="transform: rotate(180deg); filter: brightness(0) saturate(100%);" src="../assets/svg/svg-6.svg"></a>
+            <a @click="prevImage()" class="text-dark btn fs-1 arrowLeft">⟵</a>
             <!-- CARD JUMBOTRON -->
             <CardJumbotron :active="bgActive"/>
             <!-- CARD JUMBOTRON -->
