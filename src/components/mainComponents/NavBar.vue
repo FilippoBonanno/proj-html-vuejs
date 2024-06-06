@@ -34,9 +34,9 @@ export default {
             <div class="dropdown d-flex">
 
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class=" orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         HOMES
                     </a>
@@ -47,9 +47,9 @@ export default {
                 </div>
 
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         PAGES
                     </a>
@@ -62,7 +62,7 @@ export default {
 
                 <div class="text-dark">⟶</div>
                 <div class="dropdown">
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4 fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         BLOG
                     </a>
@@ -73,10 +73,10 @@ export default {
                     </div>
                 </div>
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
 
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class=" pe-4 orange_text fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         SHOP
                     </a>
@@ -86,10 +86,10 @@ export default {
                     </div>
                 </div>
 
-                <div class="text-dark">⟶</div>
+                <div class="arrow">⟶</div>
                 <div class="dropdown">
 
-                    <a class="dropdown-item pe-4 text-dark fw-bold" href="#" id="dropdownHomes"
+                    <a class="orange_text pe-4  fw-bold" href="#" id="dropdownHomes"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         EVENTS
                     </a>
@@ -99,11 +99,11 @@ export default {
                     </div>
                 </div>
 
-                <span class="text-dark arrow">⟶</span>
+                <span class="arrow">⟶</span>
 
                 <div>
 
-                    <a class="pe-4 dropdown-item text-dark fw-bold" href="#" data-bs-toggle="collapse"
+                    <a class="pe-4 orange_text fw-bold" href="#" data-bs-toggle="collapse"
                         data-bs-target="#collapseElements" aria-expanded="false">
                         ELEMENTS
                     </a>
@@ -201,6 +201,15 @@ export default {
     padding: 1rem;
 }
 
+.orange_text {
+    text-decoration: none;
+    color: black;
+}
+
+.orange_text:hover {
+    color: #FF4612;
+}
+
 .dropdown-item {
     color: rgb(207, 204, 204);
 
@@ -217,6 +226,9 @@ export default {
 
 }
 
+.arrow {
+    color: #FF4612;
+}
 
 .elements {
     color: lightslategray;
