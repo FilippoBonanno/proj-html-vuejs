@@ -171,28 +171,28 @@ export default {
     <div id="collapseElements" class="bg-dark collapse elementsContainer ">
         <div class="container d-flex">
             <div class="col-3 p-4">
-                <h2>Classic</h2>
+                <h2 style="color: white;">Classic</h2>
                 <ul class="list-group">
                     <li class="elements list-group p-1 lightslategray"
                         v-for="element in this.store.navBar.elements.classic">{{ element }}</li>
                 </ul>
             </div>
             <div class="col-3 p-4">
-                <h2>Presentational</h2>
+                <h2 style="color: white;"> Presentational</h2>
                 <ul class="list-group">
                     <li class="elements list-group p-1 lightslategray"
                         v-for="element in this.store.navBar.elements.presentational">{{ element }}</li>
                 </ul>
             </div>
             <div class="col-3 p-4">
-                <h2>Infographic</h2>
+                <h2 style="color: white;">Infographic</h2>
                 <ul class="list-group">
                     <li class="elements list-group p-1 lightslategray"
                         v-for="element in this.store.navBar.elements.infographic">{{ element }}</li>
                 </ul>
             </div>
             <div class="col-3 p-4">
-                <h2>Typography</h2>
+                <h2 style="color: white;">Typography</h2>
                 <ul class="list-group">
                     <li class="elements list-group p-1 lightslategray"
                         v-for="element in this.store.navBar.elements.typography">{{ element }}</li>
@@ -301,4 +301,5 @@ export default {
     top: 35%;
     right: 3%;
 }
+
 </style>

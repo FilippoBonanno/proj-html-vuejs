@@ -113,6 +113,6 @@ export default {
 .arrowRight {
     position: absolute;
     right: 3%;
-    filter: brightness(0) saturate(100%);
+    
 }
 </style>
